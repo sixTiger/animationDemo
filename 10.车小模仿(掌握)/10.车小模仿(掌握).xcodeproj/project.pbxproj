@@ -1,0 +1,496 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		181DA76819E917AF00E6902C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 181DA76719E917AF00E6902C /* Foundation.framework */; };
+		181DA76A19E917AF00E6902C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 181DA76919E917AF00E6902C /* CoreGraphics.framework */; };
+		181DA76C19E917AF00E6902C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 181DA76B19E917AF00E6902C /* UIKit.framework */; };
+		181DA77219E917AF00E6902C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 181DA77019E917AF00E6902C /* InfoPlist.strings */; };
+		181DA77419E917AF00E6902C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 181DA77319E917AF00E6902C /* main.m */; };
+		181DA77819E917AF00E6902C /* CZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 181DA77719E917AF00E6902C /* CZAppDelegate.m */; };
+		181DA77B19E917AF00E6902C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 181DA77919E917AF00E6902C /* Main.storyboard */; };
+		181DA77E19E917AF00E6902C /* CZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181DA77D19E917AF00E6902C /* CZViewController.m */; };
+		181DA78019E917AF00E6902C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 181DA77F19E917AF00E6902C /* Images.xcassets */; };
+		181DA78719E917AF00E6902C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 181DA78619E917AF00E6902C /* XCTest.framework */; };
+		181DA78819E917AF00E6902C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 181DA76719E917AF00E6902C /* Foundation.framework */; };
+		181DA78919E917AF00E6902C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 181DA76B19E917AF00E6902C /* UIKit.framework */; };
+		181DA79119E917AF00E6902C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 181DA78F19E917AF00E6902C /* InfoPlist.strings */; };
+		181DA79319E917AF00E6902C /* _0_________Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 181DA79219E917AF00E6902C /* _0_________Tests.m */; };
+		181DA7A119E91C2D00E6902C /* OBShapedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 181DA79E19E91C2D00E6902C /* OBShapedButton.m */; };
+		181DA7A219E91C2D00E6902C /* UIImage+ColorAtPixel.m in Sources */ = {isa = PBXBuildFile; fileRef = 181DA7A019E91C2D00E6902C /* UIImage+ColorAtPixel.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		181DA78A19E917AF00E6902C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 181DA75C19E917AF00E6902C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 181DA76319E917AF00E6902C;
+			remoteInfo = "10.车小模仿(掌握)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		181DA76419E917AF00E6902C /* 10.车小模仿(掌握).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "10.车小模仿(掌握).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		181DA76719E917AF00E6902C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		181DA76919E917AF00E6902C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		181DA76B19E917AF00E6902C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		181DA76F19E917AF00E6902C /* 10.车小模仿(掌握)-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "10.车小模仿(掌握)-Info.plist"; sourceTree = "<group>"; };
+		181DA77119E917AF00E6902C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		181DA77319E917AF00E6902C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		181DA77519E917AF00E6902C /* 10.车小模仿(掌握)-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "10.车小模仿(掌握)-Prefix.pch"; sourceTree = "<group>"; };
+		181DA77619E917AF00E6902C /* CZAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CZAppDelegate.h; sourceTree = "<group>"; };
+		181DA77719E917AF00E6902C /* CZAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CZAppDelegate.m; sourceTree = "<group>"; };
+		181DA77A19E917AF00E6902C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		181DA77C19E917AF00E6902C /* CZViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CZViewController.h; sourceTree = "<group>"; };
+		181DA77D19E917AF00E6902C /* CZViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CZViewController.m; sourceTree = "<group>"; };
+		181DA77F19E917AF00E6902C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		181DA78519E917AF00E6902C /* 10.车小模仿(掌握)Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "10.车小模仿(掌握)Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		181DA78619E917AF00E6902C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		181DA78E19E917AF00E6902C /* 10.车小模仿(掌握)Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "10.车小模仿(掌握)Tests-Info.plist"; sourceTree = "<group>"; };
+		181DA79019E917AF00E6902C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		181DA79219E917AF00E6902C /* _0_________Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_0_________Tests.m"; sourceTree = "<group>"; };
+		181DA79D19E91C2D00E6902C /* OBShapedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBShapedButton.h; sourceTree = "<group>"; };
+		181DA79E19E91C2D00E6902C /* OBShapedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBShapedButton.m; sourceTree = "<group>"; };
+		181DA79F19E91C2D00E6902C /* UIImage+ColorAtPixel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ColorAtPixel.h"; sourceTree = "<group>"; };
+		181DA7A019E91C2D00E6902C /* UIImage+ColorAtPixel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ColorAtPixel.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		181DA76119E917AF00E6902C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				181DA76A19E917AF00E6902C /* CoreGraphics.framework in Frameworks */,
+				181DA76C19E917AF00E6902C /* UIKit.framework in Frameworks */,
+				181DA76819E917AF00E6902C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		181DA78219E917AF00E6902C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				181DA78719E917AF00E6902C /* XCTest.framework in Frameworks */,
+				181DA78919E917AF00E6902C /* UIKit.framework in Frameworks */,
+				181DA78819E917AF00E6902C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		181DA75B19E917AF00E6902C = {
+			isa = PBXGroup;
+			children = (
+				181DA76D19E917AF00E6902C /* 10.车小模仿(掌握) */,
+				181DA78C19E917AF00E6902C /* 10.车小模仿(掌握)Tests */,
+				181DA76619E917AF00E6902C /* Frameworks */,
+				181DA76519E917AF00E6902C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		181DA76519E917AF00E6902C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				181DA76419E917AF00E6902C /* 10.车小模仿(掌握).app */,
+				181DA78519E917AF00E6902C /* 10.车小模仿(掌握)Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		181DA76619E917AF00E6902C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				181DA76719E917AF00E6902C /* Foundation.framework */,
+				181DA76919E917AF00E6902C /* CoreGraphics.framework */,
+				181DA76B19E917AF00E6902C /* UIKit.framework */,
+				181DA78619E917AF00E6902C /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		181DA76D19E917AF00E6902C /* 10.车小模仿(掌握) */ = {
+			isa = PBXGroup;
+			children = (
+				181DA79C19E91C2D00E6902C /* OBShapedButton */,
+				181DA77619E917AF00E6902C /* CZAppDelegate.h */,
+				181DA77719E917AF00E6902C /* CZAppDelegate.m */,
+				181DA77919E917AF00E6902C /* Main.storyboard */,
+				181DA77C19E917AF00E6902C /* CZViewController.h */,
+				181DA77D19E917AF00E6902C /* CZViewController.m */,
+				181DA77F19E917AF00E6902C /* Images.xcassets */,
+				181DA76E19E917AF00E6902C /* Supporting Files */,
+			);
+			path = "10.车小模仿(掌握)";
+			sourceTree = "<group>";
+		};
+		181DA76E19E917AF00E6902C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				181DA76F19E917AF00E6902C /* 10.车小模仿(掌握)-Info.plist */,
+				181DA77019E917AF00E6902C /* InfoPlist.strings */,
+				181DA77319E917AF00E6902C /* main.m */,
+				181DA77519E917AF00E6902C /* 10.车小模仿(掌握)-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		181DA78C19E917AF00E6902C /* 10.车小模仿(掌握)Tests */ = {
+			isa = PBXGroup;
+			children = (
+				181DA79219E917AF00E6902C /* _0_________Tests.m */,
+				181DA78D19E917AF00E6902C /* Supporting Files */,
+			);
+			path = "10.车小模仿(掌握)Tests";
+			sourceTree = "<group>";
+		};
+		181DA78D19E917AF00E6902C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				181DA78E19E917AF00E6902C /* 10.车小模仿(掌握)Tests-Info.plist */,
+				181DA78F19E917AF00E6902C /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		181DA79C19E91C2D00E6902C /* OBShapedButton */ = {
+			isa = PBXGroup;
+			children = (
+				181DA79D19E91C2D00E6902C /* OBShapedButton.h */,
+				181DA79E19E91C2D00E6902C /* OBShapedButton.m */,
+				181DA79F19E91C2D00E6902C /* UIImage+ColorAtPixel.h */,
+				181DA7A019E91C2D00E6902C /* UIImage+ColorAtPixel.m */,
+			);
+			path = OBShapedButton;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		181DA76319E917AF00E6902C /* 10.车小模仿(掌握) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 181DA79619E917AF00E6902C /* Build configuration list for PBXNativeTarget "10.车小模仿(掌握)" */;
+			buildPhases = (
+				181DA76019E917AF00E6902C /* Sources */,
+				181DA76119E917AF00E6902C /* Frameworks */,
+				181DA76219E917AF00E6902C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "10.车小模仿(掌握)";
+			productName = "10.车小模仿(掌握)";
+			productReference = 181DA76419E917AF00E6902C /* 10.车小模仿(掌握).app */;
+			productType = "com.apple.product-type.application";
+		};
+		181DA78419E917AF00E6902C /* 10.车小模仿(掌握)Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 181DA79919E917AF00E6902C /* Build configuration list for PBXNativeTarget "10.车小模仿(掌握)Tests" */;
+			buildPhases = (
+				181DA78119E917AF00E6902C /* Sources */,
+				181DA78219E917AF00E6902C /* Frameworks */,
+				181DA78319E917AF00E6902C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				181DA78B19E917AF00E6902C /* PBXTargetDependency */,
+			);
+			name = "10.车小模仿(掌握)Tests";
+			productName = "10.车小模仿(掌握)Tests";
+			productReference = 181DA78519E917AF00E6902C /* 10.车小模仿(掌握)Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		181DA75C19E917AF00E6902C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = CZ;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = itcast;
+				TargetAttributes = {
+					181DA78419E917AF00E6902C = {
+						TestTargetID = 181DA76319E917AF00E6902C;
+					};
+				};
+			};
+			buildConfigurationList = 181DA75F19E917AF00E6902C /* Build configuration list for PBXProject "10.车小模仿(掌握)" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 181DA75B19E917AF00E6902C;
+			productRefGroup = 181DA76519E917AF00E6902C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				181DA76319E917AF00E6902C /* 10.车小模仿(掌握) */,
+				181DA78419E917AF00E6902C /* 10.车小模仿(掌握)Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		181DA76219E917AF00E6902C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				181DA78019E917AF00E6902C /* Images.xcassets in Resources */,
+				181DA77219E917AF00E6902C /* InfoPlist.strings in Resources */,
+				181DA77B19E917AF00E6902C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		181DA78319E917AF00E6902C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				181DA79119E917AF00E6902C /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		181DA76019E917AF00E6902C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				181DA7A219E91C2D00E6902C /* UIImage+ColorAtPixel.m in Sources */,
+				181DA77419E917AF00E6902C /* main.m in Sources */,
+				181DA7A119E91C2D00E6902C /* OBShapedButton.m in Sources */,
+				181DA77819E917AF00E6902C /* CZAppDelegate.m in Sources */,
+				181DA77E19E917AF00E6902C /* CZViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		181DA78119E917AF00E6902C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				181DA79319E917AF00E6902C /* _0_________Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		181DA78B19E917AF00E6902C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 181DA76319E917AF00E6902C /* 10.车小模仿(掌握) */;
+			targetProxy = 181DA78A19E917AF00E6902C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		181DA77019E917AF00E6902C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				181DA77119E917AF00E6902C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		181DA77919E917AF00E6902C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				181DA77A19E917AF00E6902C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		181DA78F19E917AF00E6902C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				181DA79019E917AF00E6902C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		181DA79419E917AF00E6902C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		181DA79519E917AF00E6902C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		181DA79719E917AF00E6902C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "10.车小模仿(掌握)/10.车小模仿(掌握)-Prefix.pch";
+				INFOPLIST_FILE = "10.车小模仿(掌握)/10.车小模仿(掌握)-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.itcast.-0---------";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		181DA79819E917AF00E6902C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "10.车小模仿(掌握)/10.车小模仿(掌握)-Prefix.pch";
+				INFOPLIST_FILE = "10.车小模仿(掌握)/10.车小模仿(掌握)-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.itcast.-0---------";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		181DA79A19E917AF00E6902C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/10.车小模仿(掌握).app/10.车小模仿(掌握)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "10.车小模仿(掌握)/10.车小模仿(掌握)-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "10.车小模仿(掌握)Tests/10.车小模仿(掌握)Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		181DA79B19E917AF00E6902C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/10.车小模仿(掌握).app/10.车小模仿(掌握)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "10.车小模仿(掌握)/10.车小模仿(掌握)-Prefix.pch";
+				INFOPLIST_FILE = "10.车小模仿(掌握)Tests/10.车小模仿(掌握)Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		181DA75F19E917AF00E6902C /* Build configuration list for PBXProject "10.车小模仿(掌握)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				181DA79419E917AF00E6902C /* Debug */,
+				181DA79519E917AF00E6902C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		181DA79619E917AF00E6902C /* Build configuration list for PBXNativeTarget "10.车小模仿(掌握)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				181DA79719E917AF00E6902C /* Debug */,
+				181DA79819E917AF00E6902C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		181DA79919E917AF00E6902C /* Build configuration list for PBXNativeTarget "10.车小模仿(掌握)Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				181DA79A19E917AF00E6902C /* Debug */,
+				181DA79B19E917AF00E6902C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 181DA75C19E917AF00E6902C /* Project object */;
+}
