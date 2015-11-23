@@ -15,6 +15,8 @@ class ViewController: UIViewController {
         animation1();
         animation2();
         animation3();
+        animation4();
+        addVoieView();
     }
     
     override func didReceiveMemoryWarning() {
@@ -165,6 +167,68 @@ class ViewController: UIViewController {
     
     func randromColor() ->UIColor{
         return UIColor(red: CGFloat (arc4random_uniform(255)) / 255.0, green: CGFloat (arc4random_uniform(255)) / 255.0, blue: CGFloat (arc4random_uniform(255)) / 255.0, alpha: 1.0);
+    }
+    
+    
+    /**
+     * 录音抖动的效果
+     */
+    func animation4() {
+        let frame = CGRectMake(0, CGRectGetHeight(self.view.bounds) - 200, CGRectGetWidth(self.view.bounds), 60);
+        let voiceView = UIView(frame: frame)
+        voiceView.backgroundColor = randromColor();
+        self.view.addSubview(voiceView);
+        let right = CAReplicatorLayer()
+        right.frame = CGRect(x: CGRectGetWidth(voiceView.frame) * 0.5 + 20, y: 0, width: CGRectGetWidth(voiceView.frame) * 0.5 - 20, height: 60.0)
+        right.backgroundColor = UIColor.clearColor().CGColor
+        voiceView.layer.addSublayer(right)
+        let rightBar = CALayer()
+        rightBar.frame = CGRect(x: 0.0, y: 0.0, width: 4, height: 10)
+        rightBar.position = CGPoint(x: 2, y: 20)
+        rightBar.cornerRadius = 2.0
+        rightBar.backgroundColor = UIColor.orangeColor().CGColor
+        right.addSublayer(rightBar)
+        let move = CABasicAnimation(keyPath: "transform.scale.y")
+        move.toValue  = 2.0;
+        move.duration = 0.2
+        move.autoreverses = true
+        move.repeatCount = Float.infinity
+        rightBar.addAnimation(move, forKey: nil)
+        right.instanceCount = 20
+        // 每个的偏移
+        right.instanceTransform = CATransform3DMakeTranslation(7.0,0.0,0.0)
+        // 每个动画 的偏移时间
+        right.instanceDelay = 0.1
+        
+        right.masksToBounds = true
+        
+        
+        let left = CAReplicatorLayer()
+        left.frame = CGRect(x:0 , y: 0, width: CGRectGetWidth(voiceView.frame) * 0.5 - 20, height: 60.0)
+        left.backgroundColor = UIColor.clearColor().CGColor
+        voiceView.layer.addSublayer(left)
+        let leftBar = CALayer()
+        leftBar.frame = CGRect(x:CGRectGetWidth(left.frame) , y: 0.0, width: 4, height: 10)
+        leftBar.position = CGPoint(x: CGRectGetWidth(left.frame) - 2, y: 20)
+        leftBar.cornerRadius = 2.0
+        leftBar.backgroundColor = UIColor.orangeColor().CGColor
+        left.addSublayer(leftBar)
+        leftBar.addAnimation(move, forKey: nil)
+        left.instanceCount = 20
+        // 每个的偏移
+        left.instanceTransform = CATransform3DMakeTranslation(-7.0,0.0,0.0)
+        // 每个动画 的偏移时间
+        left.instanceDelay = 0.1
+        
+        left.masksToBounds = true
+        
+    }
+    func addVoieView(){
+    
+        let frame = CGRectMake(0, CGRectGetHeight(self.view.bounds) - 140, CGRectGetWidth(self.view.bounds), 140);
+        let voiceView = XXBVoiceView(frame:frame)
+        voiceView.backgroundColor = UIColor.yellowColor()
+        self.view.addSubview(voiceView)
     }
     
 }
