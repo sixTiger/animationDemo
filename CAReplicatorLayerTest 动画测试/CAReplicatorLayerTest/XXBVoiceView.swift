@@ -27,12 +27,12 @@ class XXBVoiceView: UIView {
     func addButton() {
     
         let voiceButton = UIButton(type: UIButtonType.Custom)
-        voiceButton.frame = CGRectMake(0 , 0, 100, 100)
+        voiceButton.frame = CGRectMake(0 , 0, 80, 80)
         self.addSubview(voiceButton)
         voiceButton.center = CGPointMake(CGRectGetWidth(UIScreen.mainScreen().bounds) * 0.5, CGRectGetHeight(self.frame) * 0.5)
         voiceButton.setImage(UIImage(named: "voice"), forState: UIControlState.Normal)
         voiceButton.backgroundColor = UIColor.orangeColor()
-        voiceButton.layer.cornerRadius = 50;
+        voiceButton.layer.cornerRadius = 40;
         voiceButton.clipsToBounds = true
         voiceButton.addTarget(self, action: "voiceButtonClick:", forControlEvents: UIControlEvents.TouchUpInside)
     }
