@@ -47,7 +47,12 @@
 
 - (void)setLineWidth:(CGFloat)lineWidth
 {
+    if (_lineWidth == lineWidth) {
+        return;
+    }
     _lineWidth = lineWidth;
+    [self.animationLayer removeFromSuperlayer];
+    _animationLayer = nil;
     [self setNeedsDisplay];
 }
 
@@ -104,9 +109,9 @@
         CGRect rect = self.bounds;
         _animationLayer.frame = rect;
         UIBezierPath *path = [UIBezierPath bezierPath];
-        [path addArcWithCenter:CGPointMake(rect.size.width/2.0 ,rect.size.height/2.0) radius:rect.size.width/2.0 - self.lineWidth * 0.5 startAngle:0 endAngle: 2*M_PI clockwise:NO];
+        [path addArcWithCenter:CGPointMake(rect.size.width/2.0 ,rect.size.height/2.0) radius:rect.size.width/2.0 - self.lineWidth * 0.5 startAngle:0 - M_PI * 0.5 endAngle: 1.5*M_PI clockwise:YES];
         _animationLayer.path=path.CGPath;//46,169,230
-        _animationLayer.lineCap = @"round";
+        _animationLayer.lineCap = @"butt";
         _animationLayer.fillColor = [UIColor clearColor].CGColor;
         _animationLayer.strokeColor= self.lineColor.CGColor;
         _animationLayer.lineWidth=self.lineWidth;

@@ -27,6 +27,7 @@
     self.animationView.percent = arc4random_uniform(100)/100.0;
 //    self.animationView.backLineColor = [UIColor lightGrayColor];
 //    self.animationView.lineColor = [UIColor redColor];
+//    self.animationView.lineWidth = 2.0;
 
 }
 
