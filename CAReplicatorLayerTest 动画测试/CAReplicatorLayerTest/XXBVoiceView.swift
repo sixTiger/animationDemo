@@ -26,46 +26,46 @@ class XXBVoiceView: UIView {
     
     func addButton() {
     
-        let voiceButton = UIButton(type: UIButtonType.Custom)
-        voiceButton.frame = CGRectMake(0 , 0, 80, 80)
+        let voiceButton = UIButton(type: UIButtonType.custom)
+        voiceButton.frame = CGRect(x: 0 , y: 0, width: 80, height: 80)
         self.addSubview(voiceButton)
-        voiceButton.center = CGPointMake(CGRectGetWidth(UIScreen.mainScreen().bounds) * 0.5, CGRectGetHeight(self.frame) * 0.5)
-        voiceButton.setImage(UIImage(named: "voice"), forState: UIControlState.Normal)
-        voiceButton.backgroundColor = UIColor.orangeColor()
+        voiceButton.center = CGPoint(x: UIScreen.main.bounds.width * 0.5, y: self.frame.height * 0.5)
+        voiceButton.setImage(UIImage(named: "voice"), for: UIControlState())
+        voiceButton.backgroundColor = UIColor.orange
         voiceButton.layer.cornerRadius = 40;
         voiceButton.clipsToBounds = true
-        voiceButton.addTarget(self, action: "voiceButtonClick:", forControlEvents: UIControlEvents.TouchUpInside)
+        voiceButton.addTarget(self, action: #selector(XXBVoiceView.voiceButtonClick(_:)), for: UIControlEvents.touchUpInside)
     }
     
-    func voiceButtonClick(clickButton : UIButton) {
+    func voiceButtonClick(_ clickButton : UIButton) {
 
-        clickButton.selected = !clickButton.selected;
-        if clickButton.selected {
+        clickButton.isSelected = !clickButton.isSelected;
+        if clickButton.isSelected {
             animation()
         } else {
-            leftBar.removeAnimationForKey("LeftAnimation")
-            rightBar.removeAnimationForKey("RightAnimation")
+            leftBar.removeAnimation(forKey: "LeftAnimation")
+            rightBar.removeAnimation(forKey: "RightAnimation")
         }
-        print("\(__FUNCTION__)")
+        print("\(#function)")
     }
     
     func animation() {
         
         right = CAReplicatorLayer()
-        right!.frame = CGRect(x: CGRectGetWidth(self.bounds) * 0.5 + 30, y: 0, width: CGRectGetWidth(self.bounds) * 0.5 - 20, height: 60.0)
-        right!.backgroundColor = UIColor.clearColor().CGColor
+        right!.frame = CGRect(x: self.bounds.width * 0.5 + 30, y: 0, width: self.bounds.width * 0.5 - 20, height: 60.0)
+        right!.backgroundColor = UIColor.clear.cgColor
         self.layer.addSublayer(right!)
         rightBar.frame = CGRect(x: 0.0, y: 0.0, width: 4, height: 10)
         rightBar.position = CGPoint(x: 2, y: 20)
         rightBar.cornerRadius = 2.0
-        rightBar.backgroundColor = UIColor.orangeColor().CGColor
+        rightBar.backgroundColor = UIColor.orange.cgColor
         right!.addSublayer(rightBar)
         let move = CABasicAnimation(keyPath: "transform.scale.y")
         move.toValue  = 2.0;
         move.duration = 0.2
         move.autoreverses = true
         move.repeatCount = Float.infinity
-        rightBar.addAnimation(move, forKey: "RightAnimation")
+        rightBar.add(move, forKey: "RightAnimation")
         right!.instanceCount = 20
         // 每个的偏移
         right!.instanceTransform = CATransform3DMakeTranslation(7.0,0.0,0.0)
@@ -76,15 +76,15 @@ class XXBVoiceView: UIView {
         
         
         left = CAReplicatorLayer()
-        left!.frame = CGRect(x:0 , y: 0, width: CGRectGetWidth(self.bounds) * 0.5 - 30, height: 60.0)
-        left!.backgroundColor = UIColor.clearColor().CGColor
+        left!.frame = CGRect(x:0 , y: 0, width: self.bounds.width * 0.5 - 30, height: 60.0)
+        left!.backgroundColor = UIColor.clear.cgColor
         self.layer.addSublayer(left!)
-        leftBar.frame = CGRect(x:CGRectGetWidth(left!.frame) , y: 0.0, width: 4, height: 10)
-        leftBar.position = CGPoint(x: CGRectGetWidth(left!.frame) - 2, y: 20)
+        leftBar.frame = CGRect(x:left!.frame.width , y: 0.0, width: 4, height: 10)
+        leftBar.position = CGPoint(x: left!.frame.width - 2, y: 20)
         leftBar.cornerRadius = 2.0
-        leftBar.backgroundColor = UIColor.orangeColor().CGColor
+        leftBar.backgroundColor = UIColor.orange.cgColor
         left!.addSublayer(leftBar)
-        leftBar.addAnimation(move, forKey: "LeftAnimation")
+        leftBar.add(move, forKey: "LeftAnimation")
         left!.instanceCount = 20
         // 每个的偏移
         left!.instanceTransform = CATransform3DMakeTranslation(-7.0,0.0,0.0)

@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     func animation1() {
         let r = CAReplicatorLayer()
         r.frame = CGRect(x: 20.0, y: 20.0, width: 60.0, height: 60.0)
-        r.backgroundColor = UIColor.lightGrayColor().CGColor
+        r.backgroundColor = UIColor.lightGray.cgColor
         view.layer.addSublayer(r)
         
         
@@ -36,7 +36,7 @@ class ViewController: UIViewController {
         bar.bounds = CGRect(x: 0.0, y: 0.0, width: 8.0, height: 40.0)
         bar.position = CGPoint(x: 10.0, y: 75.0)
         bar.cornerRadius = 2.0
-        bar.backgroundColor = randromColor().CGColor
+        bar.backgroundColor = randromColor().cgColor
         r.addSublayer(bar)
         
         
@@ -45,7 +45,7 @@ class ViewController: UIViewController {
         move.duration = 0.5
         move.autoreverses = true
         move.repeatCount = Float.infinity
-        bar.addAnimation(move, forKey: nil)
+        bar.add(move, forKey: nil)
         // 复制三份
         r.instanceCount = 3
         // 每个的偏移
@@ -62,9 +62,9 @@ class ViewController: UIViewController {
     */
     func animation2(){
         let r = CAReplicatorLayer()
-        r.frame = CGRectMake(100,20,200.0,200.0)
+        r.frame = CGRect(x: 100,y: 20,width: 200.0,height: 200.0)
         r.cornerRadius = 10.0
-        r.backgroundColor = UIColor(white:0.0,alpha:0.75).CGColor
+        r.backgroundColor = UIColor(white:0.0,alpha:0.75).cgColor
         // 锚点
         //        r.position = view.center
         view.layer.addSublayer(r)
@@ -72,10 +72,10 @@ class ViewController: UIViewController {
         
         // 创建一个小点
         let dot = CALayer()
-        dot.bounds = CGRectMake(0.0,0.0,14.0,14.0)
-        dot.position = CGPointMake(100.0,40.0)
-        dot.backgroundColor = randromColor().CGColor
-        dot.borderColor = randromColor().CGColor
+        dot.bounds = CGRect(x: 0.0,y: 0.0,width: 14.0,height: 14.0)
+        dot.position = CGPoint(x: 100.0,y: 40.0)
+        dot.backgroundColor = randromColor().cgColor
+        dot.borderColor = randromColor().cgColor
         dot.borderWidth = 1.0
         dot.cornerRadius = 3.0
         r.addSublayer(dot)
@@ -95,7 +95,7 @@ class ViewController: UIViewController {
         shrink.toValue = 0.1
         shrink.duration = duration
         shrink.repeatCount = Float.infinity
-        dot.addAnimation(shrink,forKey:nil)
+        dot.add(shrink,forKey:nil)
         
         // 设置动画间隔
         r.instanceDelay = duration/Double(nrDots)
@@ -106,35 +106,35 @@ class ViewController: UIViewController {
     */
     func animation3(){
         let r = CAReplicatorLayer()
-        r.bounds = CGRectMake(0, 0, 300, 300)
+        r.bounds = CGRect(x: 0, y: 0, width: 300, height: 300)
         r.cornerRadius = 10;
         
         r.position = self.view.center
-        r.backgroundColor = UIColor( white:0.0,alpha:0.25).CGColor
+        r.backgroundColor = UIColor( white:0.0,alpha:0.25).cgColor
         r.position = view.center
         view.layer.addSublayer(r)
         // 添加一个亮点
         let dot = CALayer()
-        dot.bounds = CGRectMake(0.0, 0.0, 10.0, 10.0)
-        dot.backgroundColor = UIColor(white: 0.8,alpha:1.0).CGColor
-        dot.borderColor = UIColor(white:1.0,alpha:1.0).CGColor
+        dot.bounds = CGRect(x: 0.0, y: 0.0, width: 10.0, height: 10.0)
+        dot.backgroundColor = UIColor(white: 0.8,alpha:1.0).cgColor
+        dot.borderColor = UIColor(white:1.0,alpha:1.0).cgColor
         dot.borderWidth = 1.0
         dot.cornerRadius = 5.0
         dot.shouldRasterize = true
-        dot.rasterizationScale = UIScreen.mainScreen().scale
+        dot.rasterizationScale = UIScreen.main.scale
         r.addSublayer(dot)
-        dot.position = CGPointMake(94.5,214.5)
+        dot.position = CGPoint(x: 94.5,y: 214.5)
         
         let move = CAKeyframeAnimation(keyPath:"position")
         move.path = rw()
         move.repeatCount = Float.infinity
         move.duration = 4.0
-        dot.addAnimation(move,forKey:nil)
+        dot.add(move,forKey:nil)
         // 20个圆点
         r.instanceCount = 20
         r.instanceDelay = 0.1
         // 设置复制动画的颜色
-        r.instanceColor = randromColor().CGColor
+        r.instanceColor = randromColor().cgColor
         r.instanceRedOffset = -0.03
         r.instanceGreenOffset = -0.03
         r.instanceBlueOffset = -0.03
@@ -143,26 +143,26 @@ class ViewController: UIViewController {
     func rw() -> CGPath {
         //贝齐尔制图
         let bezierPath = UIBezierPath()
-        bezierPath.moveToPoint(CGPointMake(31.5,71.5))
-        bezierPath.addLineToPoint(CGPointMake(31.5,23.5))
-        bezierPath.addCurveToPoint(CGPointMake(58.5, 38.5),
-            controlPoint1:CGPointMake(31.5,23.5),
-            controlPoint2:CGPointMake(62.46,18.69))
-        bezierPath.addCurveToPoint(CGPointMake(53.5,45.5),
-            controlPoint1:CGPointMake(57.5,43.5),
-            controlPoint2:CGPointMake(53.5,45.5))
-        bezierPath.addLineToPoint(CGPointMake(43.5,48.5))
-        bezierPath.addLineToPoint(CGPointMake(53.5,66.5))
-        bezierPath.addLineToPoint(CGPointMake(62.5,51.5))
-        bezierPath.addLineToPoint(CGPointMake(70.5,66.5))
-        bezierPath.addLineToPoint(CGPointMake( 86.5,23.5))
-        bezierPath.addLineToPoint(CGPointMake(86.5,78.5))
-        bezierPath.addLineToPoint(CGPointMake(31.5,78.5))
-        bezierPath.addLineToPoint(CGPointMake(31.5,71.5))
-        bezierPath.closePath()
+        bezierPath.move(to: CGPoint(x: 31.5,y: 71.5))
+        bezierPath.addLine(to: CGPoint(x: 31.5,y: 23.5))
+        bezierPath.addCurve(to: CGPoint(x: 58.5, y: 38.5),
+            controlPoint1:CGPoint(x: 31.5,y: 23.5),
+            controlPoint2:CGPoint(x: 62.46,y: 18.69))
+        bezierPath.addCurve(to: CGPoint(x: 53.5,y: 45.5),
+            controlPoint1:CGPoint(x: 57.5,y: 43.5),
+            controlPoint2:CGPoint(x: 53.5,y: 45.5))
+        bezierPath.addLine(to: CGPoint(x: 43.5,y: 48.5))
+        bezierPath.addLine(to: CGPoint(x: 53.5,y: 66.5))
+        bezierPath.addLine(to: CGPoint(x: 62.5,y: 51.5))
+        bezierPath.addLine(to: CGPoint(x: 70.5,y: 66.5))
+        bezierPath.addLine(to: CGPoint( x: 86.5,y: 23.5))
+        bezierPath.addLine(to: CGPoint(x: 86.5,y: 78.5))
+        bezierPath.addLine(to: CGPoint(x: 31.5,y: 78.5))
+        bezierPath.addLine(to: CGPoint(x: 31.5,y: 71.5))
+        bezierPath.close()
         
-        var T = CGAffineTransformMakeScale(3.0, 3.0)
-        return CGPathCreateCopyByTransformingPath(bezierPath.CGPath, &T)!
+        var T = CGAffineTransform(scaleX: 3.0, y: 3.0)
+        return bezierPath.cgPath.copy(using: &T)!
     }
     
     func randromColor() ->UIColor{
@@ -174,26 +174,26 @@ class ViewController: UIViewController {
      * 录音抖动的效果
      */
     func animation4() {
-        let frame = CGRectMake(0, CGRectGetHeight(self.view.bounds) - 200, CGRectGetWidth(self.view.bounds), 60);
+        let frame = CGRect(x: 0, y: self.view.bounds.height - 200, width: self.view.bounds.width, height: 60);
         let voiceView = UIView(frame: frame)
         voiceView.backgroundColor = randromColor();
         self.view.addSubview(voiceView);
         let right = CAReplicatorLayer()
-        right.frame = CGRect(x: CGRectGetWidth(voiceView.frame) * 0.5 + 20, y: 0, width: CGRectGetWidth(voiceView.frame) * 0.5 - 20, height: 60.0)
-        right.backgroundColor = UIColor.clearColor().CGColor
+        right.frame = CGRect(x: voiceView.frame.width * 0.5 + 20, y: 0, width: voiceView.frame.width * 0.5 - 20, height: 60.0)
+        right.backgroundColor = UIColor.clear.cgColor
         voiceView.layer.addSublayer(right)
         let rightBar = CALayer()
         rightBar.frame = CGRect(x: 0.0, y: 0.0, width: 4, height: 10)
         rightBar.position = CGPoint(x: 2, y: 20)
         rightBar.cornerRadius = 2.0
-        rightBar.backgroundColor = UIColor.orangeColor().CGColor
+        rightBar.backgroundColor = UIColor.orange.cgColor
         right.addSublayer(rightBar)
         let move = CABasicAnimation(keyPath: "transform.scale.y")
         move.toValue  = 2.0;
         move.duration = 0.2
         move.autoreverses = true
         move.repeatCount = Float.infinity
-        rightBar.addAnimation(move, forKey: nil)
+        rightBar.add(move, forKey: nil)
         right.instanceCount = 20
         // 每个的偏移
         right.instanceTransform = CATransform3DMakeTranslation(7.0,0.0,0.0)
@@ -204,16 +204,16 @@ class ViewController: UIViewController {
         
         
         let left = CAReplicatorLayer()
-        left.frame = CGRect(x:0 , y: 0, width: CGRectGetWidth(voiceView.frame) * 0.5 - 20, height: 60.0)
-        left.backgroundColor = UIColor.clearColor().CGColor
+        left.frame = CGRect(x:0 , y: 0, width: voiceView.frame.width * 0.5 - 20, height: 60.0)
+        left.backgroundColor = UIColor.clear.cgColor
         voiceView.layer.addSublayer(left)
         let leftBar = CALayer()
-        leftBar.frame = CGRect(x:CGRectGetWidth(left.frame) , y: 0.0, width: 4, height: 10)
-        leftBar.position = CGPoint(x: CGRectGetWidth(left.frame) - 2, y: 20)
+        leftBar.frame = CGRect(x:left.frame.width , y: 0.0, width: 4, height: 10)
+        leftBar.position = CGPoint(x: left.frame.width - 2, y: 20)
         leftBar.cornerRadius = 2.0
-        leftBar.backgroundColor = UIColor.orangeColor().CGColor
+        leftBar.backgroundColor = UIColor.orange.cgColor
         left.addSublayer(leftBar)
-        leftBar.addAnimation(move, forKey: nil)
+        leftBar.add(move, forKey: nil)
         left.instanceCount = 20
         // 每个的偏移
         left.instanceTransform = CATransform3DMakeTranslation(-7.0,0.0,0.0)
@@ -225,9 +225,9 @@ class ViewController: UIViewController {
     }
     func addVoieView(){
     
-        let frame = CGRectMake(0, CGRectGetHeight(self.view.bounds) - 140, CGRectGetWidth(self.view.bounds), 140);
+        let frame = CGRect(x: 0, y: self.view.bounds.height - 140, width: self.view.bounds.width, height: 140);
         let voiceView = XXBVoiceView(frame:frame)
-        voiceView.backgroundColor = UIColor.yellowColor()
+        voiceView.backgroundColor = UIColor.yellow
         self.view.addSubview(voiceView)
     }
     
