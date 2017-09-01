@@ -16,6 +16,7 @@ class ViewController: UIViewController {
         animation2();
         animation3();
         animation4();
+        animation5();
         addVoieView();
     }
     
@@ -62,7 +63,7 @@ class ViewController: UIViewController {
     */
     func animation2(){
         let r = CAReplicatorLayer()
-        r.frame = CGRect(x: 100,y: 20,width: 200.0,height: 200.0)
+        r.frame = CGRect(x: 140,y: 20,width: 180.0,height: 180.0)
         r.cornerRadius = 10.0
         r.backgroundColor = UIColor(white:0.0,alpha:0.75).cgColor
         // 锚点
@@ -83,7 +84,7 @@ class ViewController: UIViewController {
         // 复制15个小白点
         let nrDots : Int = 15
         r.instanceCount = nrDots
-        let angle = CGFloat(2 * M_PI)/CGFloat(nrDots)
+        let angle = CGFloat(2 * Double.pi)/CGFloat(nrDots)
         r.instanceTransform = CATransform3DMakeRotation(angle, 0.0, 0.0, 1.0)
         
         // 添加动画
@@ -182,6 +183,7 @@ class ViewController: UIViewController {
         right.frame = CGRect(x: voiceView.frame.width * 0.5 + 20, y: 0, width: voiceView.frame.width * 0.5 - 20, height: 60.0)
         right.backgroundColor = UIColor.clear.cgColor
         voiceView.layer.addSublayer(right)
+        
         let rightBar = CALayer()
         rightBar.frame = CGRect(x: 0.0, y: 0.0, width: 4, height: 10)
         rightBar.position = CGPoint(x: 2, y: 20)
@@ -223,6 +225,69 @@ class ViewController: UIViewController {
         left.masksToBounds = true
         
     }
+    
+    /**
+     动画加载的效果
+     */
+    func animation5(){
+        let r = CAReplicatorLayer()
+        r.frame = CGRect(x: 20,y: 100,width: 100.0,height: 100.0)
+        r.cornerRadius = 10.0
+        r.backgroundColor = UIColor(white:0.0,alpha:0.75).cgColor
+        // 锚点
+        view.layer.addSublayer(r)
+        
+        
+        // 创建一个小点
+        let dot = CALayer()
+        dot.bounds = CGRect(x: 0.0,y: 0.0,width: 10.0,height: 10.0)
+        dot.position = CGPoint(x: 20.0,y: 50.0)
+        dot.backgroundColor = randromColor().cgColor
+        dot.borderColor = randromColor().cgColor
+        dot.borderWidth = 1.0
+        dot.cornerRadius = 5.0
+        r.addSublayer(dot)
+        
+        // 复制15个小白点
+        let nrDots : Int = 3
+        r.instanceCount = nrDots
+        // 每个的偏移
+        r.instanceTransform = CATransform3DMakeTranslation(20.0,0.0,0.0)
+        // 每个动画 的偏移时间
+        r.instanceDelay = 0.33
+        
+        let duration : CFTimeInterval = 1.0
+        let shrink = CABasicAnimation()
+        shrink.keyPath = "opacity"
+        shrink.fromValue = 1.0
+        shrink.toValue = 0.1
+        shrink.duration = duration
+        shrink.repeatCount = Float.infinity
+        dot.add(shrink,forKey:nil)
+        
+//        let move = CAKeyframeAnimation(keyPath:"position")
+//        move.path = linePath(fromPoint: dot.position)
+//        move.repeatCount = Float.infinity
+//        move.duration = 2.0
+//        dot.add(move,forKey:nil)
+
+        
+        
+        // 设置动画间隔
+        r.instanceDelay = duration/Double(nrDots)
+        
+    }
+    
+    func linePath(fromPoint: CGPoint) -> CGPath {
+        //贝齐尔制图
+        let bezierPath = UIBezierPath()
+        bezierPath.move(to: CGPoint(x: fromPoint.x - 50.0,y: fromPoint.y))
+        bezierPath.addLine(to: CGPoint(x: fromPoint.x,y: fromPoint.y))
+        bezierPath.addLine(to: CGPoint(x: fromPoint.x - 50.0,y: fromPoint.y))
+        bezierPath.close()
+        return bezierPath.cgPath
+    }
+    
     func addVoieView(){
     
         let frame = CGRect(x: 0, y: self.view.bounds.height - 140, width: self.view.bounds.width, height: 140);
