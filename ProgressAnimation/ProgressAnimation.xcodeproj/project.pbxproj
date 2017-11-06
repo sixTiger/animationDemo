@@ -16,6 +16,7 @@
 		6251251A1C3B8D480084A2F2 /* ProgressAnimationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 625125191C3B8D480084A2F2 /* ProgressAnimationTests.m */; };
 		625125251C3B8D480084A2F2 /* ProgressAnimationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 625125241C3B8D480084A2F2 /* ProgressAnimationUITests.m */; };
 		625125341C3B938A0084A2F2 /* XXBView.m in Sources */ = {isa = PBXBuildFile; fileRef = 625125331C3B938A0084A2F2 /* XXBView.m */; };
+		62936DFB1FB0413E007F81F9 /* MTAnimationImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 62936DFA1FB0413E007F81F9 /* MTAnimationImageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		625125261C3B8D480084A2F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		625125321C3B938A0084A2F2 /* XXBView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXBView.h; sourceTree = "<group>"; };
 		625125331C3B938A0084A2F2 /* XXBView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXBView.m; sourceTree = "<group>"; };
+		62936DF91FB0413E007F81F9 /* MTAnimationImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTAnimationImageView.h; sourceTree = "<group>"; };
+		62936DFA1FB0413E007F81F9 /* MTAnimationImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTAnimationImageView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,8 @@
 				625124FF1C3B8D480084A2F2 /* Supporting Files */,
 				625125321C3B938A0084A2F2 /* XXBView.h */,
 				625125331C3B938A0084A2F2 /* XXBView.m */,
+				62936DF91FB0413E007F81F9 /* MTAnimationImageView.h */,
+				62936DFA1FB0413E007F81F9 /* MTAnimationImageView.m */,
 			);
 			path = ProgressAnimation;
 			sourceTree = "<group>";
@@ -278,6 +283,7 @@
 				625125071C3B8D480084A2F2 /* ViewController.m in Sources */,
 				625125341C3B938A0084A2F2 /* XXBView.m in Sources */,
 				625125041C3B8D480084A2F2 /* AppDelegate.m in Sources */,
+				62936DFB1FB0413E007F81F9 /* MTAnimationImageView.m in Sources */,
 				625125011C3B8D480084A2F2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -502,6 +508,7 @@
 				6251252B1C3B8D480084A2F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6251252C1C3B8D480084A2F2 /* Build configuration list for PBXNativeTarget "ProgressAnimationTests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +517,7 @@
 				6251252E1C3B8D480084A2F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6251252F1C3B8D480084A2F2 /* Build configuration list for PBXNativeTarget "ProgressAnimationUITests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +526,7 @@
 				625125311C3B8D480084A2F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
