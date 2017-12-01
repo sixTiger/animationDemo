@@ -58,7 +58,7 @@
 - (void)drawCircleRect:(CGRect)rect {
     UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(self.lineWidth * 0.5  , self.lineWidth * 0.5 ,rect.size.width - self.lineWidth ,rect.size.height - self.lineWidth)];
     path.lineCapStyle = kCGLineCapRound;
-    path.lineJoinStyle = kCGLineJoinRound;
+    path.lineJoinStyle = kCGLineJoinMiter;
     path.lineWidth = self.lineWidth;
     [self.backLineColor set];
     [path stroke];
@@ -97,7 +97,7 @@
         UIBezierPath *path = [UIBezierPath bezierPath];
         [path addArcWithCenter:CGPointMake(rect.size.width/2.0 ,rect.size.height/2.0) radius:rect.size.width/2.0 - self.lineWidth * 0.5 startAngle:0 - M_PI * 0.5 endAngle: 1.5*M_PI clockwise:YES];
         _animationLayer.path=path.CGPath;//46,169,230
-        _animationLayer.lineCap = @"butt";
+        _animationLayer.lineCap = kCALineCapRound;
         _animationLayer.fillColor = [UIColor clearColor].CGColor;
         _animationLayer.strokeColor= self.lineColor.CGColor;
         _animationLayer.lineWidth=self.lineWidth;

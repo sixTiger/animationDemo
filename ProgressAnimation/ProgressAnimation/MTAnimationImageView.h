@@ -7,10 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+@class MTAnimationImageView;
+
+@protocol MTAnimationImageViewDeleate <NSObject>
+@optional
+
+- (void)animationImageViewAnimationDidStop:(MTAnimationImageView *)animationImageView;
+@end
 
 @interface MTAnimationImageView : UIImageView
-
-
 /**
  第0级别的动画时间 默认是0.6
  */
